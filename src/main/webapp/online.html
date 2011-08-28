@@ -1,0 +1,22 @@
+<lift:surround with="default" at="content">
+	<h3>Filtrowanie ofert</h3>
+	<lift:Menu.builder group="sorting" linkToSelf="true" li_item:class="active" ul:class="tabs" />
+	<div class="stream">
+	<lift:DealsOnline.list>
+		<div class="deal">
+		  <h3><deal:title /></h3>
+		  <div class="img">
+			<deal:thumb><img src="/img/125x100.png" class="offer-img" alt="" /></deal:thumb>
+		  </div>
+		  <p><deal:text /></p>
+		  <div class="clear" />
+		</div>
+	</lift:DealsOnline.list>
+	</div>
+	
+	<lift:DealsHot.paginate>
+	<div class="pagination">
+	<nav:prev /><nav:allpages/><nav:next/>
+	</div>
+	</lift:DealsHot.paginate>	
+</lift:surround>

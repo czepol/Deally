@@ -1,0 +1,40 @@
+<lift:surround with="default" at="content">
+<div class="s_listing s_list_view clearfix">
+<lift:Deals.show>
+  <lift:bind-at name="title">Deally :: <deal:title /></lift:bind-at>
+  <div class="s_item clearfix">
+	<div class="grid_3 alpha"><deal:thumb><img src="/img/125x100.png" class="offer-img" alt="" /></deal:thumb></div>
+	<div class="grid_9 omega">	  
+	  <h3><deal:title /></h3>
+	  <p class="s_model"><deal:category /></p>
+	  <p class="s_description"><deal:text /></p>
+	  <a class="s_button_add_to_cart" href="#"><span class="s_icon_16"><span class="s_icon"></span>Idź do oferty</span></a>
+	  <div id="product_tags"><deal:tags /></div>
+	</div>
+  </div>
+  <div class="clear"></div>
+	
+  <lift:Comments.list>
+  <a name="comments"></a>
+  <h4 id="comments">Komentarze</h4>
+  <ul>
+    <li class="comment">
+      <a name="comment_id" />
+      <div class="authorbox">
+        <span class="avatar" />
+		<span class="author" />
+		<span class="date" />
+      </div>
+	  <p class="text" />
+    </li>
+  </ul>
+  </lift:Comments.list>
+	
+  <lift:Comments.addComment form="POST">
+	<form:text />
+	<p><form:submit /></p>
+  </lift:Comments.addComment>
+
+</lift:Deals.show>
+</div>
+</lift:surround>

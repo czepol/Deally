@@ -1,0 +1,45 @@
+<div>
+  <wizard:wizard_top> <div> <wizard:bind></wizard:bind> </div> </wizard:wizard_top>
+  <wizard:screen_top> <div> <wizard:bind></wizard:bind> </div> </wizard:screen_top>
+  <!--wizard:errors> <div> <ul> <wizard:item> <li> <wizard:bind></wizard:bind> </li> </wizard:item> </ul> </div> </wizard:errors-->
+  <script>
+	$(document).ready(function(){
+		$(".help-inline").each(function(){
+			$(".help-inline").parent().parent().addClass("error");
+		});
+	});
+  </script>
+  <div>
+    <wizard:fields>
+		<fieldset>
+            <div class="clearfix" lift:bind="wizard:line">
+				<wizard:label>
+				  <label wizard:for=""><wizard:bind /></label>
+				</wizard:label>
+				<wizard:help>
+				  <span>
+					<wizard:bind></wizard:bind>
+				  </span>
+				</wizard:help>
+				<div class="input">
+					<wizard:form />
+					<wizard:field_errors>
+						<span class="help-inline">
+						<wizard:error>
+						  <wizard:bind />
+						</wizard:error>
+						</span>
+					</wizard:field_errors>
+				</div>
+            </div>
+      </fieldset>
+    </wizard:fields>
+  </div>
+  <div class="actions">
+	  <wizard:prev></wizard:prev> 
+	  <wizard:cancel></wizard:cancel>
+	  <wizard:next></wizard:next>
+  </div>
+  <wizard:screen_bottom> <div> <wizard:bind></wizard:bind> </div> </wizard:screen_bottom>
+  <wizard:wizard_bottom> <div> <wizard:bind></wizard:bind> </div> </wizard:wizard_bottom>
+</div>

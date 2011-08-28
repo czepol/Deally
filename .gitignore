@@ -1,6 +1,8 @@
 lib_managed/*
 project/boot/*
 project/build/target/*
+project/project.iml
 target/*
 upload_tmp/*
-resources/props/*
+src/main/resources/*
+

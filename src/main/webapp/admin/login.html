@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+ 
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:lift="http://liftweb.net/"> 
+ 
+<head> 
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" /> 
+	<title>Deally :: Admin :: Logowanie</title> 
+	
+	<link rel="stylesheet" href="/static/backend/css/reset.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="/static/backend/css/text.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="/static/backend/css/form.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="/static/backend/css/buttons.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="/static/backend/css/login.css" type="text/css" media="screen" />
+
+</head> 
+ 
+<body> 
+
+<div id="login">
+	<h1>Panel administratora</h1>
+	<div id="login_panel">
+		<lift:AdminDashboard.login form="POST">		
+			<div class="login_fields">
+				<div class="field">
+					<label for="email">Login</label>
+					<input type="text" name="username" value="" />		
+				</div>
+				
+				<div class="field">
+					<label for="password">Hasło</label>
+					<input type="password" name="password" value="" />			
+				</div>
+			</div>
+			
+			<div class="login_actions">
+				<form:submit />
+			</div>
+		</lift:AdminDashboard.login>
+	</div>
+</div>
+<style>
+#login h1 { text-align: center; background: none; line-height: 1em; color: #fff; width: auto; }
+</style>
+</body> 
+ 
+</html>
